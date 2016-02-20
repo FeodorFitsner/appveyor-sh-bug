@@ -1,0 +1,9 @@
+Simple script example to demonstrate bug Appveyor bug 4150 [1]
+
+The symptoms are that some shell scripts run under MSYS2's sh (which
+seems to be bash) give errors like
+
+    ./configure: line 560: 0: Bad file descriptor
+
+(this is a moderately common example, according to Google, and the one
+that bit me when trying to build Emacs).

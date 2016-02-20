@@ -1,0 +1,3 @@
+build_script: 
+  - set MSYSTEM=MINGW64
+  - C:\msys64\usr\bin\bash -l -c "cd /c/projects/sh-fail-example && ./example.sh"
