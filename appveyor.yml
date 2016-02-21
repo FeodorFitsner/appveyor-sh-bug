@@ -1,6 +1,6 @@
 build_script: 
   - set MSYSTEM=MINGW64
-  - "C:\Program Files\Git\usr\bin\bash.exe" -l -c "cd /c/projects/appveyor-sh-bug && ./example.sh"
+  - '"C:\Program Files\Git\usr\bin\bash.exe" -l -c "cd /c/projects/appveyor-sh-bug && ./example.sh"'
 #  - C:\msys64\usr\bin\bash -l -c "exec 3<&0 </dev/null"
 
 on_finish:
