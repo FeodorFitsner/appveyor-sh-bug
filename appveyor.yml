@@ -5,7 +5,7 @@ init:
 
 build_script: 
   - set MSYSTEM=MINGW64
-  - '"C:\Program Files\Git\usr\bin\bash.exe" -l -c "cd /c/projects/appveyor-sh-bug && ./example.sh"'
+  - '"C:\msys64\usr\bin\bash" -l -c "cd /c/projects/appveyor-sh-bug && ./example.sh"'
 #  - C:\msys64\usr\bin\bash -l -c "exec 3<&0 </dev/null"
   - ps: Start-Process "C:\msys64\usr\bin\bash" "-l","-c",'"cd /c/projects/appveyor-sh-bug && ./example.sh"' -RedirectStandardOutput out.txt -RedirectStandardError err.txt -Wait
   - ps: Get-Content .\out.txt
