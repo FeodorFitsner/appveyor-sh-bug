@@ -1,3 +1,8 @@
+os: test
+
+init:
+- appveyor version
+
 build_script: 
   - set MSYSTEM=MINGW64
   - '"C:\Program Files\Git\usr\bin\bash.exe" -l -c "cd /c/projects/appveyor-sh-bug && ./example.sh"'
@@ -6,5 +11,5 @@ build_script:
   - ps: Get-Content .\out.txt
   - ps: Get-Content .\err.txt
 
-on_finish:
-- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+#on_finish:
+#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
