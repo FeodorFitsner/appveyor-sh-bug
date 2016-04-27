@@ -1,6 +1,9 @@
 image: test
 #os: Visual Studio 2015
 
+environment:
+  APPVEYOR_BUILD_AGENT_CREATE_NO_WINDOW: true
+
 init:
 - appveyor version
 
